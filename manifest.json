@@ -29,7 +29,14 @@
     }
   ],
   "background": {
-    "service_worker": "src/background.js"
+    "service_worker": "src/background.js",
+    "scripts": ["src/background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "table-master-pro@example.org",
+      "strict_min_version": "121.0"
+    }
   },
   "web_accessible_resources": [
     {
