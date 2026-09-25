@@ -40,11 +40,25 @@ demo.html               Test page with horizontal, vertical, and numeric tables
 
 ## 🚀 Install (unpacked)
 
+### Chromium browsers (Chrome / Edge / Brave / Arc)
+
 1. Open `chrome://extensions` (or `edge://extensions`)
 2. Enable **Developer mode**
 3. Click **Load unpacked** and select the `table-master-pro-2.7.0/` folder
 4. Visit any page with tables (open `demo.html` for a quick test)
 5. Click the floating **▦** button in the bottom-right → **✎ Edit tables on this page**
+
+### Firefox (121+)
+
+1. Open `about:debugging#/runtime/this-firefox`
+2. Click **Load Temporary Add-on…** and select `manifest.json` in the `table-master-pro-2.7.0/` folder
+3. **Important:** Firefox treats MV3 host permissions as optional and does not grant them automatically. Open `about:addons` → **Table Master Pro** → **Permissions** tab and enable **Access your data for all websites** — otherwise the content script (and the ▦ button) won't appear on pages.
+4. Visit any page with tables (open `demo.html` for a quick test) and use the ▦ button or the toolbar popup.
+
+> Cross-browser note: the manifest declares the background worker with both
+> `background.service_worker` (used by Chromium) and `background.scripts`
+> (used by Firefox 121+), and the JS uses the promise-based `browser.*` API
+> when available, falling back to Chromium's promisified `chrome.*`.
 
 ## ⌨️ Keyboard shortcuts while editing
 
