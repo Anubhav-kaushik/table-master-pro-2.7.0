@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Table Master Pro — Demo Page</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+         max-width: 960px; margin: 30px auto; padding: 0 20px; color: #222; }
+  h1 { color: #4f8cff; }
+  table { border-collapse: collapse; margin: 18px 0; width: 100%; }
+  th, td { border: 1px solid #cfd5e1; padding: 8px 10px; font-size: 14px; }
+  th { background: #f5f7fb; font-weight: 600; text-align: left; }
+  tfoot td { font-weight: 700; background: #fafafa; }
+  .vertical td:first-child { font-weight: 600; background: #f5f7fb; width: 30%; }
+  code { background: #f1f3f8; padding: 1px 4px; border-radius: 3px; }
+  .tip { background: #eef3ff; border-left: 4px solid #4f8cff; padding: 10px 14px; font-size: 13px; }
+</style>
+</head>
+<body>
+  <h1>Table Master Pro — Steroids Demo</h1>
+  <p class="tip">Click the floating <b>▦</b> button in the bottom-right, then <b>✎ Edit tables on this page</b>. Double-click any cell to edit, press <code>=</code> to start a formula, and use the toolbar to add rows/columns or copy/reset.</p>
+
+  <h2>1. Sales report (horizontal, header + footer, mixed types)</h2>
+  <table>
+    <thead>
+      <tr><th>Region</th><th>Units</th><th>Price</th><th>Revenue</th><th>Date</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>North</td><td>142</td><td>$19.99</td><td>2838.58</td><td>2026-01-14</td></tr>
+      <tr><td>South</td><td>98</td><td>$24.50</td><td>2401.00</td><td>2026-02-02</td></tr>
+      <tr><td>East</td><td>215</td><td>$17.25</td><td>3708.75</td><td>2026-03-10</td></tr>
+      <tr><td>West</td><td>176</td><td>$22.00</td><td>3872.00</td><td>2026-04-22</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Total</td><td>631</td><td>—</td><td>12820.33</td><td>—</td></tr>
+    </tfoot>
+  </table>
+
+  <h2>2. Product specs (vertical — labels in first column)</h2>
+  <table class="vertical">
+    <tbody>
+      <tr><td>Model</td><td>TM-Pro 3000</td></tr>
+      <tr><td>Weight</td><td>1.2 kg</td></tr>
+      <tr><td>Battery life</td><td>18 hours</td></tr>
+      <tr><td>Waterproof</td><td>Yes</td></tr>
+      <tr><td>Release</td><td>15/09/2026</td></tr>
+      <tr><td>Price</td><td>$499</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Small numeric grid (great for testing formulas)</h2>
+  <table>
+    <thead><tr><th>Q</th><th>A</th><th>B</th><th>C</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>10</td><td>20</td><td>30</td></tr>
+      <tr><td>2</td><td>5</td><td>15</td><td>25</td></tr>
+      <tr><td>3</td><td>8</td><td>22</td><td>14</td></tr>
+    </tbody>
+  </table>
+
+  <p><b>Try these formulas:</b> <code>=SUM(B2:B4)</code>, <code>=B2+C2*2</code>, <code>=AVERAGE(B2:D4)</code>, <code>=IF(B2>10,"big","small")</code>.</p>
+</body>
+</html>
